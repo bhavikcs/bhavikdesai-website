@@ -1,11 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bhavik Desai | Senior Legal &amp; Compliance Professional</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Bhavik Desai | General Counsel · Legal &amp; Compliance · Board Advisor</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
@@ -14,184 +11,198 @@ html{scroll-behavior:smooth}
   --ink:#1a1a1a; --ink2:#2d2d2d;
   --paper:#faf8f4; --paper2:#f5f2ec; --paper3:#f0ece4;
   --gold:#9b7b3c; --gold2:#b8944f; --gold3:#d4af72;
-  --rule:rgba(155,123,60,0.25);
+  --rule:rgba(155,123,60,0.18);
   --text:#2c2823; --muted:#6b6258;
   --max:1200px;
   --ff-serif:'Cormorant Garamond',Georgia,serif;
   --ff-sans:'Jost',sans-serif;
 }
-body{background:var(--paper);color:var(--text);font-family:var(--ff-sans);font-weight:400;font-size:18px;line-height:1.75;overflow-x:hidden}
+body{background:var(--paper);color:var(--text);font-family:var(--ff-sans);font-weight:400;font-size:18px;line-height:1.75;overflow-x:hidden;letter-spacing:0.01em;}
 .container{max-width:var(--max);margin:0 auto;padding:0 2rem;position:relative;z-index:1;width:100%}
-.section{padding:80px 0}
+.section{padding:80px 0;position:relative}
 
-/* TYPOGRAPHY - BETTER READABILITY */
-.heading{font-family:var(--ff-serif);font-size:clamp(2rem,5vw,3.2rem);color:var(--ink);line-height:1.2;font-weight:500;margin-bottom:1rem}
-.hero-name{font-family:var(--ff-serif);font-size:clamp(2.5rem,7vw,4.5rem);color:var(--ink);line-height:1.1;font-weight:500;margin-bottom:1.5rem}
-.hero-name span{display:block;font-style:italic;color:var(--gold);font-size:.6em;margin-top:.2em}
-.hero-lead{font-size:clamp(1rem,4vw,1.2rem);font-weight:400;line-height:1.6;max-width:100%}
-.label{font-size:.7rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--gold2);display:block;margin-bottom:.85rem}
+/* VISUAL ACCENT LINES */
+.section:not(:first-of-type)::before {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 2px;
+  background: var(--gold3);
+  margin-bottom: 2rem;
+  opacity: 0.35;
+}
+.section:first-of-type::before{display:none;}
+
+/* TYPOGRAPHY */
+.heading{font-family:var(--ff-serif);font-size:clamp(2rem,4.5vw,3rem);color:var(--ink);line-height:1.2;font-weight:500;margin-bottom:.75rem}
+.hero-name{font-family:var(--ff-serif);font-size:clamp(2.6rem,6vw,4.5rem);color:var(--ink);line-height:1.1;font-weight:500;margin-bottom:1.25rem}
+.hero-name span{display:block;font-style:italic;color:var(--gold);font-size:.58em;margin-top:.15em;letter-spacing:.02em}
+.label{font-size:.72rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--gold2);display:block;margin-bottom:.75rem}
+.rule{width:42px;height:1px;background:var(--gold3);margin:1rem 0 2rem}
 
 /* BUTTONS */
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;padding:.8rem 1.5rem;font-size:.75rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;transition:all .3s ease;cursor:pointer;border-radius:0}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;padding:.75rem 1.6rem;font-size:.75rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;transition:all .25s ease;cursor:pointer;border-radius:0}
 .btn-primary{background:var(--gold);color:var(--paper);border:1px solid var(--gold)}
-.btn-primary:hover{background:var(--gold2);transform:translateY(-2px)}
+.btn-primary:hover{background:var(--gold2);transform:translateY(-2px);box-shadow:0 6px 14px rgba(155,123,60,0.2)}
 .btn-ghost{background:transparent;color:var(--gold);border:1px solid var(--rule)}
-.btn-ghost:hover{border-color:var(--gold);color:var(--gold);transform:translateY(-2px)}
+.btn-ghost:hover{border-color:var(--gold);transform:translateY(-2px)}
 
-/* NAVIGATION - MOBILE FRIENDLY */
-nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(250,248,244,.98);backdrop-filter:blur(10px);border-bottom:1px solid var(--rule)}
-.nav-inner{max-width:var(--max);margin:0 auto;padding:0 1.5rem;display:flex;align-items:center;justify-content:space-between;height:64px}
-.nav-logo{font-family:var(--ff-serif);font-size:1.2rem;font-weight:500;color:var(--ink)}
-.nav-logo span{color:var(--gold)}
-.nav-links{display:flex;gap:1.5rem;list-style:none}
-.nav-links a{font-size:.7rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--muted)}
+/* NAVIGATION */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(250,248,244,.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--rule)}
+.nav-inner{max-width:var(--max);margin:0 auto;padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:64px}
+.nav-logo{font-family:var(--ff-serif);font-size:1.5rem;font-weight:500;color:var(--gold);letter-spacing:0.02em;text-decoration:none;line-height:1}
+.nav-logo span{color:var(--ink);font-weight:400}
+.nav-links{display:flex;gap:1.8rem;list-style:none}
+.nav-links a{font-size:.72rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);transition:color .2s}
 .nav-links a:hover,.nav-links a.active{color:var(--gold)}
 .nav-toggle{display:none;flex-direction:column;gap:5px;cursor:pointer}
 .nav-toggle span{display:block;width:24px;height:2px;background:var(--gold);transition:all .3s}
 
-/* HERO SECTION - FULL WIDTH NO CUTOFF */
-#home{min-height:100vh;display:flex;align-items:center;padding-top:64px;background:linear-gradient(160deg,var(--paper) 55%,var(--paper2) 100%)}
-.hero-inner{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;max-width:var(--max);margin:0 auto;padding:4rem 2rem;width:100%}
+/* HERO */
+#home{min-height:100vh;display:flex;align-items:center;padding-top:64px;background:linear-gradient(155deg,var(--paper) 55%,var(--paper2) 100%)}
+.hero-inner{display:grid;grid-template-columns:1fr 1fr;gap:3.5rem;align-items:center;max-width:var(--max);margin:0 auto;padding:4rem 2rem;width:100%}
 .hero-content{width:100%}
+.hero-eyebrow{font-size:.76rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--gold2);margin-bottom:1rem}
+.hero-lead{font-size:clamp(1rem,2.5vw,1.12rem);font-weight:400;line-height:1.7;max-width:540px;color:var(--ink2)}
+.hero-ctas{display:flex;gap:.85rem;margin-top:1.75rem;flex-wrap:wrap}
 .hero-strip{display:flex;gap:2rem;margin-top:2rem;padding-top:1.5rem;border-top:1px solid var(--rule);flex-wrap:wrap}
+.strip-item{min-width:65px}
 .strip-num{font-family:var(--ff-serif);font-size:2rem;color:var(--gold);line-height:1;font-weight:500}
-.strip-lbl{font-size:.7rem;color:var(--muted);letter-spacing:.05em;text-transform:uppercase;margin-top:.2rem}
+.strip-lbl{font-size:.68rem;color:var(--muted);letter-spacing:.05em;text-transform:uppercase;margin-top:.2rem}
 .hero-photo-wrap{display:flex;justify-content:center;width:100%}
 .hero-frame{position:relative;width:100%;max-width:320px;aspect-ratio:3/4}
-.hero-photo{position:relative;width:100%;height:100%;background:var(--paper3);border:1px solid var(--paper3);overflow:hidden}
-.hero-photo img{width:100%;height:100%;object-fit:cover}
+.hero-photo{position:relative;width:100%;height:100%;background:var(--paper3);border:1px solid var(--paper3);overflow:hidden;display:flex;align-items:center;justify-content:center}
+.hero-photo img{width:100%;height:100%;object-fit:cover;display:block}
 
-/* ABOUT SECTION */
+/* ABOUT */
 #about{background:var(--paper2);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
-.about-grid{display:grid;grid-template-columns:1fr 1.5fr;gap:3rem}
-.about-pull{font-family:var(--ff-serif);font-size:clamp(1.1rem,3vw,1.5rem);font-style:italic;font-weight:400;line-height:1.5;border-left:2px solid var(--gold2);padding-left:1.5rem}
-.about-body p{font-size:1rem;line-height:1.8;margin-bottom:1.2rem}
+.about-grid{display:grid;grid-template-columns:1fr 2fr;gap:3rem;align-items:start}
+.about-pull{font-family:var(--ff-serif);font-size:clamp(1.1rem,2.5vw,1.4rem);font-style:italic;font-weight:400;line-height:1.55;border-left:2px solid var(--gold2);padding-left:1.4rem;color:var(--ink2);position:sticky;top:90px}
+.about-body p{font-size:1rem;line-height:1.85;margin-bottom:1.2rem;color:var(--text);max-width:75ch}
 
-/* CV/EXPERIENCE */
-.cv-layout{display:grid;grid-template-columns:2fr 1fr;gap:3rem}
-.tl{position:relative;padding-left:1.75rem}
+/* EXPERTISE GRID */
+.expertise-section{background:var(--paper)}
+.expertise-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--rule);border:1px solid var(--rule);margin-top:1.5rem}
+.exp-cell{background:var(--paper);padding:1.4rem 1.5rem;transition:background .2s ease}
+.exp-cell:hover{background:var(--paper2)}
+.exp-icon{font-size:.95rem;color:var(--gold);margin-bottom:.6rem}
+.exp-label{font-family:var(--ff-serif);font-size:1rem;font-weight:500;color:var(--ink);margin-bottom:.4rem}
+.exp-detail{font-size:.84rem;color:var(--muted);line-height:1.6}
+
+/* EXPERIENCE */
+#cv{background:var(--paper)}
+.cv-layout{display:grid;grid-template-columns:3fr 1fr;gap:3rem}
+.tl{position:relative;padding-left:1.5rem}
 .tl::before{content:'';position:absolute;left:0;top:10px;bottom:0;width:1px;background:var(--rule)}
 .tl-entry{position:relative;margin-bottom:2.5rem;padding-bottom:2rem;border-bottom:1px solid var(--rule)}
-.tl-period{font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:.4rem;font-weight:500}
-.tl-title{font-family:var(--ff-serif);font-size:1.2rem;color:var(--ink);margin-bottom:.2rem;font-weight:500}
-.tl-org{font-size:.85rem;color:var(--gold2);margin-bottom:.75rem}
-.tl-body{font-size:.95rem;line-height:1.75}
-.tl-body ul{padding-left:1.2rem;margin-top:.5rem}
-.tl-body li{margin-bottom:.3rem}
-.tl-tags{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:.8rem}
-.tl-tag{font-size:.65rem;letter-spacing:.05em;padding:.2rem .6rem;border:1px solid var(--rule);color:var(--muted)}
+.tl-entry:last-child{border-bottom:none;margin-bottom:0}
+.tl-period{font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:.3rem;font-weight:600}
+.tl-title{font-family:var(--ff-serif);font-size:1.22rem;color:var(--ink);margin-bottom:.2rem;font-weight:500}
+.tl-org{font-size:.95rem;color:var(--gold);font-weight:600;margin-bottom:.6rem;letter-spacing:.02em}
+.tl-summary{font-size:.96rem;line-height:1.75;color:var(--ink2);margin-bottom:.9rem}
+.tl-achievements{list-style:none;padding:0;margin:0}
+.tl-achievements li{font-size:.92rem;line-height:1.68;padding:.4rem 0 .4rem 1.2rem;border-bottom:1px solid var(--rule);position:relative;color:var(--text)}
+.tl-achievements li:last-child{border-bottom:none}
+.tl-achievements li::before{content:'—';position:absolute;left:0;color:var(--gold3);font-size:.75rem;top:.45rem}
+.tl-tags{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:.85rem}
+.tl-tag{font-size:.65rem;letter-spacing:.04em;padding:.2rem .65rem;border:1px solid var(--rule);color:var(--muted);background:var(--paper2)}
+.early-career{background:var(--paper2);border:1px solid var(--rule);padding:1.2rem 1.5rem;font-size:.92rem;line-height:1.75;color:var(--muted);margin-top:.5rem}
 
 /* SIDEBAR */
+.cv-sidebar{}
 .sidebar-block{margin-bottom:2rem}
-.sidebar-title{font-family:var(--ff-serif);font-size:1.1rem;color:var(--ink);margin-bottom:1rem;font-weight:500;padding-bottom:.5rem;border-bottom:1px solid var(--rule)}
-.cred-item{margin-bottom:.8rem;padding-bottom:.8rem;border-bottom:1px solid var(--rule)}
+.sidebar-title{font-family:var(--ff-serif);font-size:1.05rem;color:var(--ink);margin-bottom:1rem;font-weight:500;padding-bottom:.5rem;border-bottom:1px solid var(--rule)}
+.cred-item{margin-bottom:.75rem;padding-bottom:.75rem;border-bottom:1px solid var(--rule)}
+.cred-item:last-child{border-bottom:none;margin-bottom:0}
 .cred-degree{font-size:.9rem;color:var(--ink);font-weight:500}
-.cred-inst{font-size:.8rem;color:var(--gold2);margin:.1rem 0}
+.cred-inst{font-size:.78rem;color:var(--gold2);margin:.12rem 0}
 .cred-note{font-size:.7rem;color:var(--muted)}
-.skills-list{display:flex;flex-wrap:wrap;gap:.5rem}
-.skill-pill{font-size:.75rem;font-weight:500;padding:.3rem .8rem;background:var(--paper2);border:1px solid var(--rule);color:var(--muted);transition:all .2s}
+.lang-list{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.3rem}
+.lang-pill{font-size:.76rem;padding:.22rem .8rem;border:1px solid var(--rule);color:var(--muted);background:var(--paper2)}
 
 /* RECOGNITION */
-.rec-buckets{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.5rem}
-.bucket{background:var(--paper);border:1px solid var(--rule);padding:1.5rem}
-.bucket-title{font-family:var(--ff-serif);font-size:1.1rem;color:var(--ink);font-weight:500}
+#recognition{background:var(--paper2);border-top:1px solid var(--rule)}
+.rec-intro{font-size:.95rem;color:var(--muted);line-height:1.75;max-width:720px;margin-bottom:2rem}
+.rec-buckets{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:1.25rem}
+.bucket{background:var(--paper);border:1px solid var(--rule);padding:1.3rem;transition:transform .2s,box-shadow .2s}
+.bucket:hover{transform:translateY(-3px);box-shadow:0 8px 20px rgba(0,0,0,0.05)}
+.bucket-head{display:flex;align-items:flex-start;gap:.8rem;margin-bottom:.9rem;padding-bottom:.7rem;border-bottom:1px solid var(--rule)}
+.bucket-icon{width:34px;height:34px;border:1px solid var(--rule);display:flex;align-items:center;justify-content:center;color:var(--gold2);font-size:.8rem;flex-shrink:0}
+.bucket-title{font-family:var(--ff-serif);font-size:1rem;color:var(--ink);font-weight:500;line-height:1.3}
+.bucket-count{font-size:.65rem;color:var(--gold2);font-weight:600;letter-spacing:.08em;text-transform:uppercase;margin-top:.1rem}
 .bucket-list{list-style:none;padding:0}
-.bucket-list li{font-size:.9rem;padding:.5rem 0;border-bottom:1px solid var(--rule);display:flex;flex-wrap:wrap;gap:.5rem}
-.bucket-year{font-size:.7rem;color:var(--gold2);font-weight:500}
-
-/* GALLERY */
-.gallery-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:1rem}
-.gal-item{background:var(--paper2);border:1px solid var(--rule);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:.5rem;color:var(--muted);font-size:.7rem;text-transform:uppercase;min-height:150px;padding:1rem}
+.bucket-list li{font-size:.85rem;padding:.4rem 0;border-bottom:1px solid var(--rule);display:flex;gap:.7rem;align-items:baseline;line-height:1.5;color:var(--text)}
+.bucket-list li:last-child{border-bottom:none}
+.bucket-year{font-size:.67rem;color:var(--gold2);font-weight:600;flex-shrink:0;min-width:55px;letter-spacing:.04em}
 
 /* CONTACT */
-.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem}
-.contact-item{display:flex;align-items:flex-start;gap:1rem;margin-bottom:1.5rem}
-.ci-icon{width:40px;height:40px;border:1px solid var(--rule);display:flex;align-items:center;justify-content:center;color:var(--gold2);font-size:.9rem;flex-shrink:0}
-.ci-label{font-size:.65rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:.2rem;font-weight:500}
-.ci-val{font-size:.95rem;color:var(--text);word-break:break-all}
-.ci-val a{color:var(--text);text-decoration:none}
+#contact{background:var(--paper)}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;margin-top:1.5rem}
+.contact-note{font-size:.95rem;color:var(--muted);line-height:1.8;margin-bottom:1.8rem;max-width:440px}
+.contact-item{display:flex;align-items:flex-start;gap:.9rem;margin-bottom:1.4rem}
+.ci-icon{width:40px;height:40px;border:1px solid var(--rule);display:flex;align-items:center;justify-content:center;color:var(--gold2);font-size:.86rem;flex-shrink:0;background:var(--paper2)}
+.ci-label{font-size:.65rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:.2rem;font-weight:600}
+.ci-val{font-size:.95rem;color:var(--text);word-break:break-word}
+.ci-val a{color:var(--text);transition:color .2s}
 .ci-val a:hover{color:var(--gold)}
-.contact-aside{background:var(--paper);border:1px solid var(--rule);padding:2rem}
-.aside-title{font-family:var(--ff-serif);font-size:1.2rem;color:var(--ink);margin-bottom:1rem;font-weight:500}
-.aside-body{font-size:.9rem;color:var(--muted);line-height:1.8}
+.contact-aside{background:var(--paper2);border:1px solid var(--rule);padding:2rem}
+.aside-title{font-family:var(--ff-serif);font-size:1.15rem;color:var(--ink);margin-bottom:.8rem;font-weight:500}
+.aside-body{font-size:.92rem;color:var(--muted);line-height:1.8}
 
 /* FOOTER */
-footer{background:var(--ink);padding:2rem 0;border-top:1px solid rgba(140,109,63,.3)}
+footer{background:var(--ink);padding:2rem 0;border-top:1px solid rgba(140,109,63,.35)}
 .foot-inner{max-width:var(--max);margin:0 auto;padding:0 2rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+.foot-logo{font-family:var(--ff-serif);font-size:1rem;color:#7a6a4f}
 .foot-copy{font-size:.7rem;color:#5a5040}
 .foot-nav{display:flex;gap:1.5rem;list-style:none;flex-wrap:wrap}
-.foot-nav a{font-size:.7rem;color:#5a5040;letter-spacing:.1em;text-transform:uppercase}
+.foot-nav a{font-size:.7rem;color:#5a5040;letter-spacing:.1em;text-transform:uppercase;transition:color .2s}
+.foot-nav a:hover{color:#9b7b3c}
 
-/* ====== MOBILE RESPONSIVE - NO CUTOFF ====== */
-@media (max-width: 900px) {
-  .hero-inner { grid-template-columns: 1fr; gap: 2rem; padding: 3rem 1.5rem; }
-  .hero-photo-wrap { order: -1; margin-bottom: 1rem; }
-  .hero-frame { max-width: 260px; margin: 0 auto; }
-  .about-grid, .cv-layout, .contact-grid { grid-template-columns: 1fr; gap: 2rem; }
-  .container { padding: 0 1.2rem; }
-  .section { padding: 60px 0; }
+/* MOBILE RESPONSIVE */
+@media(max-width:950px){
+  .hero-inner{grid-template-columns:1fr;gap:2rem;padding:3rem 1.5rem}
+  .hero-photo-wrap{order:-1;margin-bottom:.5rem}
+  .hero-frame{max-width:260px;margin:0 auto}
+  .about-grid,.cv-layout,.contact-grid{grid-template-columns:1fr;gap:2rem}
+  .about-pull{position:static}
+  .expertise-grid{grid-template-columns:repeat(2,1fr)}
+  .container{padding:0 1.25rem}
+  .section{padding:60px 0}
 }
-
-@media (max-width: 768px) {
-  body { font-size: 16px; }
-  
-  /* Mobile Navigation */
-  .nav-links { 
-    display: none; 
-    flex-direction: column; 
-    position: absolute; 
-    top: 64px; 
-    left: 0; 
-    right: 0; 
-    background: var(--paper); 
-    border-bottom: 1px solid var(--rule); 
-    padding: 1.5rem; 
-    gap: 1rem; 
-  }
-  .nav-links.open { display: flex; }
-  .nav-toggle { display: flex; }
-  
-  .hero-strip { justify-content: center; gap: 1.5rem; }
-  .strip-num { font-size: 1.6rem; }
-  .hero-ctas { flex-direction: column; width: 100%; }
-  .btn { width: 100%; text-align: center; }
-  
-  .tl { padding-left: 1.2rem; }
-  .tl-period { font-size: 0.65rem; }
-  .tl-title { font-size: 1.1rem; }
-  .tl-body { font-size: 0.9rem; }
-  
-  .rec-buckets { grid-template-columns: 1fr; }
-  .gallery-grid { grid-template-columns: repeat(2, 1fr); }
-  .gal-item { min-height: 120px; }
-  
-  .contact-item { flex-wrap: wrap; }
-  .ci-val { word-break: break-word; }
-  
-  .foot-inner { flex-direction: column; text-align: center; }
-  .foot-nav { justify-content: center; }
+@media(max-width:768px){
+  body{font-size:17px}
+  .nav-links{display:none;flex-direction:column;position:absolute;top:64px;left:0;right:0;background:var(--paper);border-bottom:1px solid var(--rule);padding:1.25rem 2rem;gap:1rem}
+  .nav-links.open{display:flex}
+  .nav-toggle{display:flex}
+  .hero-ctas{flex-direction:column;width:100%}
+  .btn{width:100%;text-align:center;justify-content:center}
+  .hero-strip{gap:1rem;justify-content:space-between}
+  .strip-item{text-align:center;flex:1}
+  .strip-num{font-size:1.5rem}
+  .strip-lbl{font-size:.6rem}
+  .rec-buckets{grid-template-columns:1fr}
+  .expertise-grid{grid-template-columns:1fr}
+  .foot-inner{flex-direction:column;text-align:center}
+  .foot-nav{justify-content:center}
+  .tl{padding-left:1rem}
+  .tl::before{left:0}
+  .tl-entry::before{left:-1rem;width:6px;height:6px}
+  .tl-achievements li{font-size:.85rem;padding:.35rem 0 .35rem 1rem}
+  .tl-achievements li::before{left:0;font-size:.7rem;top:.4rem}
+  .tl-tag{font-size:.6rem;padding:.15rem .5rem}
+  .tl-title{font-size:1.1rem}
+  .tl-org{font-size:.88rem}
 }
-
-@media (max-width: 480px) {
-  body { font-size: 15px; }
-  .container { padding: 0 1rem; }
-  .heading { font-size: 1.8rem; }
-  .hero-name { font-size: 2.2rem; }
-  .hero-lead { font-size: 0.95rem; }
-  .hero-frame { max-width: 200px; }
-  .hero-strip { gap: 1rem; }
-  .strip-num { font-size: 1.3rem; }
-  .strip-lbl { font-size: 0.6rem; }
-  
-  .tl-tag { font-size: 0.55rem; padding: 0.15rem 0.5rem; }
-  .skill-pill { font-size: 0.65rem; padding: 0.2rem 0.6rem; }
-  
-  .gallery-grid { grid-template-columns: 1fr; }
-  .gal-item { min-height: 100px; }
-  
-  .contact-aside { padding: 1.2rem; }
-  .aside-title { font-size: 1rem; }
-  .aside-body { font-size: 0.8rem; }
+@media(max-width:480px){
+  body{font-size:16px}
+  .container{padding:0 1rem}
+  .hero-frame{max-width:200px}
+  .hero-strip{gap:.8rem}
+  .strip-num{font-size:1.3rem}
+  .heading{font-size:1.8rem}
+  .hero-name{font-size:2rem}
+  .section{padding:48px 0}
+  .contact-aside{padding:1.3rem}
 }
 </style>
 </head>
@@ -200,13 +211,14 @@ footer{background:var(--ink);padding:2rem 0;border-top:1px solid rgba(140,109,63
 <!-- NAV -->
 <nav id="navbar">
   <div class="nav-inner">
-    <a href="#home" class="nav-logo">Bhavik Desai<span>.</span></a>
+    <a href="#home" class="nav-logo">B.D.<span></span></a>
     <ul class="nav-links" id="navLinks">
       <li><a href="#home">Home</a></li>
       <li><a href="#about">About</a></li>
+      <li><a href="#expertise">Expertise</a></li>
       <li><a href="#cv">Experience</a></li>
       <li><a href="#recognition">Recognition</a></li>
-       <li><a href="#contact">Contact</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
     <div class="nav-toggle" id="navToggle"><span></span><span></span><span></span></div>
   </div>
@@ -214,13 +226,12 @@ footer{background:var(--ink);padding:2rem 0;border-top:1px solid rgba(140,109,63
 
 <!-- HERO -->
 <section id="home">
-  <div class="hero-ornament"></div>
   <div class="hero-inner">
     <div class="hero-content">
-      <p class="hero-eyebrow">Senior Legal &amp; Compliance Professional</p>
+      <p class="hero-eyebrow">General Counsel · Legal & Compliance Leadership · Board Advisor</p>
       <h1 class="hero-name">Bhavik<span>Desai</span></h1>
       <p class="hero-lead">
-        Over <strong>22 years</strong> of in-house legal and compliance leadership across <strong>pharmaceutical and life sciences</strong> — spanning India, the Middle East, Africa, and international markets. A career defined by accountability, integrity, and measurable impact.
+        International legal, compliance, governance, and investigations executive with over <strong>22 years</strong> of experience advising multinational <strong>healthcare and pharmaceutical</strong> organisations across the Middle East, Africa, India, Europe, and Latin America.
       </p>
       <div class="hero-ctas">
         <a href="#cv" class="btn btn-primary"><i class="fa-regular fa-file-lines"></i> Career Journey</a>
@@ -228,16 +239,16 @@ footer{background:var(--ink);padding:2rem 0;border-top:1px solid rgba(140,109,63
       </div>
       <div class="hero-strip">
         <div class="strip-item"><div class="strip-num">22+</div><div class="strip-lbl">Years in Law</div></div>
-        <div class="strip-item"><div class="strip-num">50+</div><div class="strip-lbl">Markets Covered</div></div>
-        <div class="strip-item"><div class="strip-num">14</div><div class="strip-lbl">Years at BMS</div></div>
+        <div class="strip-item"><div class="strip-num">46</div><div class="strip-lbl">Markets at BMS</div></div>
+        <div class="strip-item"><div class="strip-num">14+</div><div class="strip-lbl">Years at BMS</div></div>
         <div class="strip-item"><div class="strip-num">28</div><div class="strip-lbl">Peer Awards</div></div>
       </div>
     </div>
     <div class="hero-photo-wrap">
       <div class="hero-frame">
         <div class="hero-photo">
-    <img src="images/Bhavik%20Desai.JPG" alt="Bhavik Desai" style="width:100%; height:100%; object-fit:cover;">
-</div>
+          <img src="images/Bhavik-Desai.JPG" alt="Bhavik Desai" style="width:100%; height:100%; object-fit:cover;" onerror="this.src='https://via.placeholder.com/300x400?text=Photo'">
+        </div>
       </div>
     </div>
   </div>
@@ -246,20 +257,41 @@ footer{background:var(--ink);padding:2rem 0;border-top:1px solid rgba(140,109,63
 <!-- ABOUT -->
 <section id="about" class="section">
   <div class="container">
-    <span class="label">Career Philosophy</span>
-    <h2 class="heading">A <em>journey</em> through law,<br>compliance &amp; leadership</h2>
+    <span class="label">Professional Biography</span>
+    <h2 class="heading">A <em>career</em> built on integrity,<br>governance &amp; impact</h2>
     <div class="rule"></div>
     <div class="about-grid">
       <div>
         <p class="about-pull">"Law is not merely a set of rules — it is the architecture within which organisations build trust, operate with integrity, and create sustainable value."</p>
       </div>
       <div class="about-body">
-        <p>My legal career began in Mumbai, where I trained simultaneously across corporate law, company secretarial practice, and commercial litigation. Starting at Amines &amp; Plasticizers and then ATCO Healthcare, I built the fundamentals: statutory compliance, board governance, SEBI filings, and courtroom representation across civil, criminal, and labour matters in courts throughout India. That grounding — rigorous, multi-disciplinary, and very much hands-on — shaped everything that followed.</p>
-        <p>Modern India Ltd deepened my experience in listed-company governance, cross-border M&amp;A, and commercial contracting with international partners. At Wockhardt Ltd, I moved into genuinely complex transactional work: M&amp;A due diligence spanning the UK, USA, Switzerland, and other European jurisdictions, IPO preparation for Wockhardt Hospitals, debt restructuring, and sophisticated joint venture structuring. It was at Wockhardt that I first operated at the intersection of legal rigour and strategic business decision-making.</p>
-        <p>Joining Fulford India Ltd (a Merck &amp; Co. subsidiary) as Company Secretary and Legal Head was my entry into multinational pharmaceutical law. For nearly four years I managed India, Bangladesh, and Sri Lanka legal functions, supported the South-East Asia compliance hub, advised on FCPA compliance, and played a central role in the operational integration of Schering-Plough, Organon, and MSD businesses in India — one of the most complex pharmaceutical mergers of that era.</p>
-        <p>Fourteen years at Bristol-Myers Squibb — from Director of Legal in India to Senior Director heading legal and compliance across TIMER (Turkey, Israel, India, Middle East and Representative Markets) covering 50+ markets — became the defining chapter of my career. That breadth of geography, regulatory complexity, and commercial scale, combined with direct accountability to VP and Assistant General Counsel level, gave me a perspective on pharmaceutical law that few in-house practitioners acquire.</p>
-        <p>Throughout, I have invested in professional credentials that reflect genuine intellectual curiosity: dual Company Secretary qualifications across India and the UK, WIPO Advanced IP certifications, a Diploma in Cyber Law, Bar Council of India enrolment, and currently the SQE pathway to qualification as a Solicitor in England and Wales.</p>
+        <p>Bhavik Desai is an international legal, compliance, governance, and investigations executive with more than 22 years of experience advising multinational healthcare, pharmaceutical, and life sciences organisations across the Middle East, Africa, India, Turkey, Israel, Eastern Europe, and Latin America.</p>
+        <p>During a 14-year leadership career with <strong>Bristol-Myers Squibb</strong>, he served as Senior Director and Head of Legal &amp; Compliance for international markets — partnering with executive leadership on corporate governance, market access, regulatory strategy, investigations, complex transactions, public policy, intellectual property protection, crisis management, and enterprise risk.</p>
+        <p>His career began in Mumbai, where he trained simultaneously across corporate law, company secretarial practice, and commercial litigation — building a multi-disciplinary foundation across listed-company governance, SEBI filings, and courtroom representation. At <strong>Wockhardt Ltd</strong>, he moved into complex transactional work — cross-border M&amp;A, IPO preparation, and debt restructuring. Joining <strong>MSD (Fulford India Ltd)</strong> as Company Secretary and Legal Head deepened his experience in multinational pharmaceutical law, and he played a central role in the operational integration of Schering-Plough, Organon, and MSD businesses in India.</p>
+        <p>Throughout his career, Bhavik has supported major cross-border acquisitions, integrations, and divestitures, led high-profile investigations and dispute resolution matters, and advised on innovative healthcare access initiatives, privacy, data governance, localisation, and digital transformation programmes.</p>
+        <p>He holds dual Bachelor degrees in Commerce and Law (registered legal practitioner), dual Company Secretary qualifications across India and the UK, a PGDBA in Finance, WIPO Advanced IP certifications with distinction, and a Diploma in Cyber Law.</p>
+        <p>Today, he advises organisations as an independent consultant on governance, compliance transformation, investigations, data privacy, regulatory risk, and strategic growth initiatives across emerging markets.</p>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERTISE -->
+<section id="expertise" class="section expertise-section">
+  <div class="container">
+    <span class="label">Areas of Practice</span>
+    <h2 class="heading">Core <em>Expertise</em></h2>
+    <div class="rule"></div>
+    <div class="expertise-grid">
+      <div class="exp-cell"><div class="exp-icon"><i class="fa-solid fa-scale-balanced"></i></div><div class="exp-label">Regulatory &amp; Compliance</div><div class="exp-detail">Pharmaceutical regulatory strategy across MEA, India, Turkey, EU, and CEE. ABAC programme design, ethics leadership, and compliance framework implementation across large international markets.</div></div>
+      <div class="exp-cell"><div class="exp-icon"><i class="fa-solid fa-file-contract"></i></div><div class="exp-label">Commercial Contracts</div><div class="exp-detail">Distribution, agency, licensing, and co-marketing agreements. Complex multi-party negotiations and cross-border deal execution across emerging and developed markets.</div></div>
+      <div class="exp-cell"><div class="exp-icon"><i class="fa-solid fa-arrow-right-arrow-left"></i></div><div class="exp-label">M&amp;A &amp; Transactions</div><div class="exp-detail">Due diligence, integration management, and post-merger legal frameworks across major pharmaceutical acquisitions and divestitures. Experience across both buy-side and sell-side mandates.</div></div>
+      <div class="exp-cell"><div class="exp-icon"><i class="fa-solid fa-shield-halved"></i></div><div class="exp-label">Data Privacy &amp; Digital</div><div class="exp-detail">Multi-jurisdiction privacy programmes across EU GDPR, Turkey KVKK, Saudi PDPL, Israel PPPA, and India DPDPA. AI-enabled tool governance and digital transformation advisory.</div></div>
+      <div class="exp-cell"><div class="exp-icon"><i class="fa-solid fa-gavel"></i></div><div class="exp-label">Investigations &amp; Litigation</div><div class="exp-detail">Led over 100 internal investigations across ethics, anti-corruption, and fraud. Managed high-stakes patent, commercial, antitrust, and regulatory litigation across multiple jurisdictions.</div></div>
+      <div class="exp-cell"><div class="exp-icon"><i class="fa-solid fa-lightbulb"></i></div><div class="exp-label">IP Strategy &amp; Enforcement</div><div class="exp-detail">Patent protection and strategic IP management in pharmaceutical markets. Experience with product inclusion in Medicines Patent Pool. WIPO-certified with advanced patent training.</div></div>
+      <div class="exp-cell"><div class="exp-icon"><i class="fa-solid fa-chart-line"></i></div><div class="exp-label">Govt. Affairs &amp; Access</div><div class="exp-detail">Collaboration with Health, Commerce, and Finance ministries across MEA and India. Economic Participation and localisation programme delivery. Public-private partnership structuring.</div></div>
+      <div class="exp-cell"><div class="exp-icon"><i class="fa-solid fa-people-group"></i></div><div class="exp-label">Board Governance</div><div class="exp-detail">Dual Company Secretary qualifications (India and UK). Listed-company compliance across BSE, NSE, and international exchanges. Board advisory and governance design.</div></div>
+      <div class="exp-cell"><div class="exp-icon"><i class="fa-solid fa-globe"></i></div><div class="exp-label">Distribution &amp; Agency Law</div><div class="exp-detail">Pharmaceutical distributor legal management across MEA, CEE, EU, and LATAM. Expertise in GCC, Swiss, Belgian, and English law governing distribution and agency relationships.</div></div>
     </div>
   </div>
 </section>
@@ -268,61 +300,80 @@ footer{background:var(--ink);padding:2rem 0;border-top:1px solid rgba(140,109,63
 <section id="cv" class="section">
   <div class="container">
     <span class="label">Professional Experience</span>
-    <h2 class="heading">22 Years of <em>In-House</em> Leadership</h2>
+    <h2 class="heading">20+ Years of <em>In-House</em> Leadership</h2>
     <div class="rule"></div>
     <div class="cv-layout">
 
       <div>
         <div class="tl">
 
-          <!-- BMS -->
+          <!-- Independent Consultant -->
           <div class="tl-entry">
-            <div class="tl-period">December 2011 — February 2026 &nbsp;·&nbsp; 14+ years</div>
-            <div class="tl-title">Senior Director, Legal — TIMER Region &amp; India</div>
-            <div class="tl-org">Bristol-Myers Squibb &nbsp;·&nbsp; Dubai, UAE</div>
-            <div class="tl-body">
-              <p>Progressed from Director of Legal Affairs, India (Dec 2011) → Director of Legal Affairs &amp; Compliance, MEA &amp; India (May 2014) → Head of Legal Affairs, MEA &amp; India (Dec 2015) → Senior Director, Legal — TIMER &amp; Local Representative Markets, reporting to VP &amp; Assistant General Counsel, Intercon Markets.</p>
-              <p style="margin-top:.75rem">The TIMER mandate (Turkey, Israel, Middle East &amp; Representative Markets) encompassed 50+ markets including 14 from MEA, 18 from EU, and 13 from LATAM, with 5 active legal entities. Scope included strategic regulatory and commercial legal advice to TIMER leadership, governance of the cluster's compliance programme, distributor legal management, IP protection, M&amp;A support, and direct management of lawyers in the CEETI region.</p>
-              <ul style="margin-top:.75rem">
-                <li>Led Economic Participation programme in Saudi Arabia — 43 initiatives worth SAR 452 million (282% above regulatory minimum); achieved 65%+ Saudisation target</li>
-                <li>Pioneered multi-jurisdiction data privacy compliance from 2018: EU GDPR, Turkish KVKK, Saudi PDPL, Israeli PPPA</li>
-                <li>Achieved waiver of compulsory licence from the Indian government through strategic legal counsel and advocacy</li>
-                <li>Delivered successful outcomes on complex IP litigations through robust litigation strategy</li>
-                <li>Restructured and set up innovative business models across Middle East and African markets</li>
-                <li>Established legal management system reducing legal risk, improving statutory compliance controls, and enabling external spend analysis</li>
-                <li>Represented BMS at global cross-functional teams on product strategy, market access, and pricing</li>
-                <li>Participated in Law Forward global legal transformation initiative (2023–2025)</li>
-                <li>Selected in 2013 for BMS Law Department's "Attorney in Residence Programme" at US HQ — Global Commercialization &amp; Market Access</li>
-              </ul>
-            </div>
+            <div class="tl-period">2026 — Present</div>
+            <div class="tl-title">Independent Legal &amp; Compliance Consultant</div>
+            <div class="tl-org">MEA &amp; India Markets · Dubai, UAE</div>
+            <div class="tl-summary">Advising pharmaceutical, healthcare, and life sciences organisations on governance, compliance transformation, regulatory strategy, data privacy, and strategic growth initiatives across emerging markets.</div>
+            <ul class="tl-achievements">
+              <li>Legal and compliance advisory for pharma distribution, market entry, and commercial transactions across the GCC and Levant</li>
+              <li>Regulatory strategy and economic participation (EP/LCGPA) advisory for international companies entering Saudi Arabia and UAE markets</li>
+              <li>Data privacy programme design under DPDPA, PDPL, GDPR, and KVKK — including board-level compliance presentations</li>
+              <li>Commercial due diligence and transaction support for regional pharma acquisitions and partnerships</li>
+            </ul>
             <div class="tl-tags">
-              <span class="tl-tag">TIMER · MEA · India · CEE</span>
+              <span class="tl-tag">MEA Advisory</span>
+              <span class="tl-tag">Pharma &amp; Healthcare</span>
+              <span class="tl-tag">Data Privacy</span>
+              <span class="tl-tag">Regulatory Strategy</span>
+            </div>
+          </div>
+
+          <!-- Bristol-Myers Squibb -->
+          <div class="tl-entry">
+            <div class="tl-period">December 2011 — February 2026 · 14 years</div>
+            <div class="tl-title">Senior Director &amp; Head of Legal and Compliance</div>
+            <div class="tl-org">Bristol-Myers Squibb · Dubai, UAE</div>
+            <div class="tl-summary">Progressed from Director, Legal Affairs India (2011) to Senior Director &amp; Head of Legal and Compliance — Middle East, Africa, India, Israel, Turkey, Russia, CEE &amp; LATAM — covering 46 markets. Reporting directly to VP &amp; Assistant General Counsel, Intercontinental Markets.</div>
+            <ul class="tl-achievements">
+              <li>Implemented strategic, risk-based legal and compliance frameworks across a large portfolio of international markets spanning MEA, India, Turkey, CEE, and LATAM</li>
+              <li>Supported the Celgene acquisition and multiple subsequent transactions — integrating regulatory, IP, tax, and pricing strategies to unlock significant new growth opportunities across the region</li>
+              <li>Managed legal transitions for major portfolio divestitures, securing regulatory approvals, overseeing asset transfers, and ensuring business continuity</li>
+              <li>Led Economic Participation programme in Saudi Arabia — substantially exceeding regulatory minimum targets and achieving Saudisation goals</li>
+              <li>Pioneered multi-jurisdiction data privacy compliance programme from 2018 across EU GDPR, Turkish KVKK, Saudi PDPL, and Israeli PPPA</li>
+              <li>Secured substantial patent protections through strategic injunctions; negotiated and settled significant commercial disputes to protect corporate reputation and reduce litigation exposure</li>
+              <li>Supported HIV product inclusion in Medicines Patent Pool and led licensing arrangements with generic manufacturers to expand patient access</li>
+              <li>Led EU stock management and pricing governance to ensure compliance with competition law and EMA guidelines</li>
+              <li>Secured professional service licences in Poland, Czech Republic, Greece, Hungary, and Germany to meet Russia sanctions requirements</li>
+              <li>Designed value-based partnerships, health outcome programmes, and post-study drug access initiatives to accelerate early access in EU markets</li>
+              <li>Secured public-private partnerships to expand healthcare accessibility and affordability across MEA</li>
+              <li>Led over 100 complex investigations across HR, ethics, anti-corruption, and fraud — fostering a culture of transparency and accountability</li>
+              <li>Structured a Build-Operate-Transfer model with an Indian partner for R&amp;D innovation and Global Capability Centre establishment</li>
+              <li>Selected for BMS Law Department's Attorney in Residence Programme at US HQ — Global Commercialisation &amp; Market Access</li>
+            </ul>
+            <div class="tl-tags">
+              <span class="tl-tag">MEA · India · Turkey · Israel</span>
+              <span class="tl-tag">CEE · EU · LATAM</span>
               <span class="tl-tag">EP / LCGPA</span>
               <span class="tl-tag">Data Privacy</span>
               <span class="tl-tag">IP Litigation</span>
               <span class="tl-tag">ABAC / Compliance</span>
               <span class="tl-tag">M&amp;A</span>
-              <span class="tl-tag">People Management</span>
             </div>
           </div>
 
-          <!-- Fulford / MSD -->
+          <!-- MSD / Merck Sharp & Dohme -->
           <div class="tl-entry">
-            <div class="tl-period">March 2008 — December 2011 &nbsp;·&nbsp; ~4 years</div>
-            <div class="tl-title">Company Secretary &amp; Legal Head</div>
-            <div class="tl-org">Fulford India Ltd (Merck &amp; Co., USA) &nbsp;·&nbsp; Mumbai, India</div>
-            <div class="tl-body">
-              <p>Served as Designated Company Secretary and Legal Head for Fulford India, a BSE-listed subsidiary of Merck &amp; Co. (MSD). Responsible for all legal matters across India, Bangladesh, and Sri Lanka, as well as shaping the South-East Asia legal and compliance hub.</p>
-              <ul style="margin-top:.75rem">
-                <li>Full BSE listing compliance, Audit Committee governance, board secretarial functions</li>
-                <li>IP management and enforcement across India, Bangladesh, Sri Lanka, Nepal, and Bhutan in partnership with global IP team</li>
-                <li>FCPA compliance advisory and business due diligence for fair business practice adoption</li>
-                <li>Advised management on employee relations, ethical investigations, and compliance violations</li>
-                <li>Played a central role in operational integration of Schering-Plough, Organon, and MSD businesses in India post-merger</li>
-                <li>Contract negotiation and summarisation for global approval; management of litigation inventory</li>
-                <li>Represented Indian operations at US and Asia Pacific legal conferences</li>
-              </ul>
-            </div>
+            <div class="tl-period">March 2008 — December 2011 · ~4 years</div>
+            <div class="tl-title">Head, Corporate Secretary &amp; Legal (South-East Asia)</div>
+            <div class="tl-org">Merck Sharp &amp; Dohme (MSD) — Fulford India Ltd · Mumbai, India</div>
+            <div class="tl-summary">Designated Company Secretary and Legal Head for Fulford India, a BSE-listed MSD subsidiary. Responsible for all legal matters across India, Bangladesh, and Sri Lanka, and the South-East Asia compliance hub.</div>
+            <ul class="tl-achievements">
+              <li>Established a major strategic partnership with an Indian pharmaceutical company to co-market a diabetes portfolio</li>
+              <li>Led operational integration of Schering-Plough, Organon, and MSD businesses in India — one of the most complex pharmaceutical mergers of that era</li>
+              <li>Delivered significant cost savings through restructuring of manufacturing and supply agreements</li>
+              <li>Led anti-counterfeiting enforcement initiatives protecting substantial product value across South Asia</li>
+              <li>Full BSE listing compliance, Audit Committee governance, and FCPA compliance advisory</li>
+              <li>IP management and enforcement across India, Bangladesh, Sri Lanka, Nepal, and Bhutan</li>
+            </ul>
             <div class="tl-tags">
               <span class="tl-tag">India · SEA</span>
               <span class="tl-tag">BSE Compliance</span>
@@ -334,20 +385,16 @@ footer{background:var(--ink);padding:2rem 0;border-top:1px solid rgba(140,109,63
 
           <!-- Wockhardt -->
           <div class="tl-entry">
-            <div class="tl-period">April 2006 — March 2008 &nbsp;·&nbsp; 2 years</div>
+            <div class="tl-period">April 2006 — March 2008 · 2 years</div>
             <div class="tl-title">Manager — Finance, Secretarial &amp; Legal</div>
-            <div class="tl-org">Wockhardt Ltd &nbsp;·&nbsp; Mumbai, India</div>
-            <div class="tl-body">
-              <p>Wockhardt was a pivotal step into complex transactional and cross-border legal work for a multinational pharmaceutical group listed on BSE, NSE, Luxembourg Stock Exchange, and HKSE.</p>
-              <ul style="margin-top:.75rem">
-                <li>Company Secretary and Compliance Officer for Wockhardt Hospitals Ltd</li>
-                <li>Led due diligence for M&amp;A across multiple jurisdictions including UK (Ireland company), New Delhi (Dumex), and European subsidiaries (UK, USA, Switzerland, Cyprus, Germany, Brazil, South Africa, Mexico, Nigeria, Ireland)</li>
-                <li>Independently managed IPO preparation for Wockhardt Hospitals Ltd: liaison with merchant bankers, solicitors, international counsel; pricing mechanism; prospectus drafting</li>
-                <li>Drafted and negotiated joint ventures, private equity, venture capital, and M&amp;A transaction documents</li>
-                <li>Debt restructuring and financial documentation with consortium bankers and State financial authorities</li>
-                <li>Advised on foreign investment, securities laws, and company laws across jurisdictions</li>
-              </ul>
-            </div>
+            <div class="tl-org">Wockhardt Ltd · Mumbai, India</div>
+            <div class="tl-summary">Complex transactional and cross-border legal work for a multinational pharma group listed on BSE, NSE, Luxembourg, and HKSE.</div>
+            <ul class="tl-achievements">
+              <li>Due diligence for major cross-border M&amp;A transactions across UK, Europe, USA, Switzerland, and India</li>
+              <li>Led IPO preparation for Wockhardt Hospitals Ltd — liaison with merchant bankers, international counsel, and prospectus drafting</li>
+              <li>Drafted and negotiated joint ventures, private equity, venture capital, and M&amp;A transaction documents</li>
+              <li>Debt restructuring and financial documentation with consortium bankers and state financial authorities</li>
+            </ul>
             <div class="tl-tags">
               <span class="tl-tag">Cross-border M&amp;A</span>
               <span class="tl-tag">IPO</span>
@@ -356,38 +403,13 @@ footer{background:var(--ink);padding:2rem 0;border-top:1px solid rgba(140,109,63
             </div>
           </div>
 
-          <!-- Modern India -->
+          <!-- Early Career -->
           <div class="tl-entry">
-            <div class="tl-period">February 2004 — April 2006 &nbsp;·&nbsp; ~2 years</div>
-            <div class="tl-title">Company Secretary &amp; Legal Executive</div>
-            <div class="tl-org">Modern India Ltd (formerly The Modern Mills Ltd) &nbsp;·&nbsp; Mumbai, India</div>
-            <div class="tl-body">
-              <p>Listed company governance, secretarial compliance, and commercial legal work across India and international subsidiaries. Set up Wholly Owned Subsidiary in Hong Kong and representative office in China. Advised on collaborations, amalgamations, joint ventures, and expansion opportunities. Civil, criminal, and consumer litigation management across India.</p>
-            </div>
-            <div class="tl-tags">
-              <span class="tl-tag">Listed Company Governance</span>
-              <span class="tl-tag">SEBI · FEMA</span>
-              <span class="tl-tag">International Subsidiaries</span>
-            </div>
-          </div>
-
-          <!-- ATCO -->
-          <div class="tl-entry">
-            <div class="tl-period">January 2003 — January 2004</div>
-            <div class="tl-title">Company Secretary &amp; Legal Executive</div>
-            <div class="tl-org">ATCO Healthcare Ltd &nbsp;·&nbsp; Mumbai, India</div>
-            <div class="tl-body">
-              <p>BSE and OTCEI listed healthcare company. Managed secretarial compliances, statutory meetings, and appeared before SEBI Vigilance Department in inquiry proceedings under Substantial Acquisitions and Insider Trading Regulations. Civil, criminal, and consumer litigation across India. IP registration and infringement management.</p>
-            </div>
-          </div>
-
-          <!-- Amines -->
-          <div class="tl-entry">
-            <div class="tl-period">March 2001 — December 2002</div>
-            <div class="tl-title">Management Trainee</div>
-            <div class="tl-org">Amines &amp; Plasticizers Ltd &nbsp;·&nbsp; Mumbai, India</div>
-            <div class="tl-body">
-              <p>First professional role: corporate law and stock exchange compliance, statutory registers and records, employee stock option maintenance, and liaison with external attorneys. Foundation in corporate secretarial practice.</p>
+            <div class="tl-period">2001 — 2006</div>
+            <div class="tl-title">Early Career</div>
+            <div class="tl-org">Modern India Ltd · ATCO Healthcare Ltd · Amines &amp; Plasticizers Ltd · Mumbai, India</div>
+            <div class="early-career">
+              Foundational roles across listed and unlisted companies, building expertise in <strong>statutory compliance</strong>, <strong>board secretarial practice</strong>, <strong>SEBI filings</strong>, and <strong>civil, criminal &amp; labour litigation</strong> across Indian courts. Included appearances before SEBI Vigilance in inquiry proceedings, and setup of a wholly owned subsidiary in Hong Kong.
             </div>
           </div>
 
@@ -396,16 +418,17 @@ footer{background:var(--ink);padding:2rem 0;border-top:1px solid rgba(140,109,63
 
       <!-- SIDEBAR -->
       <div class="cv-sidebar">
+
         <div class="sidebar-block">
           <div class="sidebar-title">Qualifications</div>
           <div class="cred-item">
-            <div class="cred-degree">LLB — Bachelor of Laws</div>
-            <div class="cred-inst">J.C. College of Law, Vile Parle · Mumbai University</div>
+            <div class="cred-degree">Bachelor of Laws (LLB)</div>
+            <div class="cred-inst">Mumbai University, India</div>
             <div class="cred-note">2003</div>
           </div>
           <div class="cred-item">
             <div class="cred-degree">B.Com (First Class)</div>
-            <div class="cred-inst">Shri Chinai College · Mumbai University</div>
+            <div class="cred-inst">Mumbai University, India</div>
             <div class="cred-note">1999</div>
           </div>
           <div class="cred-item">
@@ -420,54 +443,36 @@ footer{background:var(--ink);padding:2rem 0;border-top:1px solid rgba(140,109,63
           </div>
           <div class="cred-item">
             <div class="cred-degree">Chartered Secretary (ACIS)</div>
-            <div class="cred-inst">CGI — Institute of Chartered Secretaries &amp; Administrators, London</div>
+            <div class="cred-inst">CGI — Institute of Chartered Secretaries, London</div>
             <div class="cred-note">2006</div>
           </div>
           <div class="cred-item">
-            <div class="cred-degree">General Course on IP (First Class)</div>
+            <div class="cred-degree">General Course on IP</div>
             <div class="cred-inst">WIPO Worldwide Academy, Geneva</div>
-            <div class="cred-note">March 2007</div>
+            <div class="cred-note">2007 · First Class</div>
           </div>
           <div class="cred-item">
-            <div class="cred-degree">Advanced Course on Patents (Distinction)</div>
+            <div class="cred-degree">Advanced Course on Patents</div>
             <div class="cred-inst">WIPO Worldwide Academy, Geneva</div>
-            <div class="cred-note">December 2008</div>
+            <div class="cred-note">2008 · Distinction</div>
           </div>
           <div class="cred-item">
-            <div class="cred-degree">Diploma in Cyber Law (First Class)</div>
+            <div class="cred-degree">Diploma in Cyber Law</div>
             <div class="cred-inst">Asian School of Cyber Laws, Pune</div>
-            <div class="cred-note">April 2010</div>
-          </div>
-        </div>
-
-        <div class="sidebar-block">
-          <div class="sidebar-title">Areas of Expertise</div>
-          <div class="skills-list">
-            <span class="skill-pill">Pharmaceutical Regulatory Law</span>
-            <span class="skill-pill">Commercial Contracts &amp; Negotiation</span>
-            <span class="skill-pill">Data Privacy (GDPR · PDPL · KVKK · DPDPA)</span>
-            <span class="skill-pill">Corporate Compliance &amp; Ethics</span>
-            <span class="skill-pill">M&amp;A Due Diligence</span>
-            <span class="skill-pill">Economic Participation (EP/LCGPA)</span>
-            <span class="skill-pill">IP Strategy &amp; Enforcement</span>
-            <span class="skill-pill">Distribution &amp; Agency Law</span>
-            <span class="skill-pill">Litigation Management</span>
-            <span class="skill-pill">ABAC Programmes</span>
-            <span class="skill-pill">Board &amp; Corporate Governance</span>
-            <span class="skill-pill">Regulatory Strategy</span>
-            <span class="skill-pill">People Management &amp; Coaching</span>
+            <div class="cred-note">2010 · First Class</div>
           </div>
         </div>
 
         <div class="sidebar-block">
           <div class="sidebar-title">Languages</div>
-          <div class="skills-list">
-            <span class="skill-pill">English</span>
-            <span class="skill-pill">Hindi</span>
-            <span class="skill-pill">Gujarati</span>
-            <span class="skill-pill">Marathi</span>
+          <div class="lang-list">
+            <span class="lang-pill">English</span>
+            <span class="lang-pill">Hindi</span>
+            <span class="lang-pill">Gujarati</span>
+            <span class="lang-pill">Marathi</span>
           </div>
         </div>
+
       </div>
 
     </div>
@@ -480,11 +485,10 @@ footer{background:var(--ink);padding:2rem 0;border-top:1px solid rgba(140,109,63
     <span class="label">Peer Recognition · Bristol-Myers Squibb · 2021–2025</span>
     <h2 class="heading">Recognised <em>Achievements</em></h2>
     <div class="rule"></div>
-    <p class="rec-intro">The following recognition awards were received through Bristol-Myers Squibb's peer recognition programme between 2021 and 2025, nominated by colleagues and leadership across functions and geographies. Organised below by the nature of the work recognised.</p>
+    <p class="rec-intro">The following recognition awards were received through Bristol-Myers Squibb's peer recognition programme between 2021 and 2025, nominated by colleagues and leadership across functions and geographies.</p>
 
     <div class="rec-buckets">
 
-      <!-- REGULATORY & COMPLIANCE -->
       <div class="bucket">
         <div class="bucket-head">
           <div class="bucket-icon"><i class="fa-solid fa-shield-halved"></i></div>
@@ -496,14 +500,13 @@ footer{background:var(--ink);padding:2rem 0;border-top:1px solid rgba(140,109,63
         <ul class="bucket-list">
           <li><span class="bucket-year">2021</span>SFDA re-inspection commitment — Saudi Arabia PV website launch</li>
           <li><span class="bucket-year">2021</span>SFDA Inspection Commitment — regulatory milestone delivery</li>
-          <li><span class="bucket-year">2023</span>PCH Tender Finalization — Algeria</li>
+          <li><span class="bucket-year">2023</span>PCH Tender Finalisation — Algeria</li>
           <li><span class="bucket-year">2024</span>Russia in-market compliance controls and execution</li>
-          <li><span class="bucket-year">2024</span>Legal review of Optimized Promotional Model — Phase II</li>
-          <li><span class="bucket-year">2025</span>hCelgene Business Transfer — completion of long-running process</li>
+          <li><span class="bucket-year">2024</span>Legal review of Optimised Promotional Model — Phase II</li>
+          <li><span class="bucket-year">2025</span>Celgene Business Transfer — completion of long-running process</li>
         </ul>
       </div>
 
-      <!-- TRANSACTION & COMMERCIAL -->
       <div class="bucket">
         <div class="bucket-head">
           <div class="bucket-icon"><i class="fa-solid fa-file-contract"></i></div>
@@ -515,13 +518,12 @@ footer{background:var(--ink);padding:2rem 0;border-top:1px solid rgba(140,109,63
         <ul class="bucket-list">
           <li><span class="bucket-year">2021</span>MEA Distributor Remediation Plan — urgent commercial restructuring</li>
           <li><span class="bucket-year">2022</span>Algeria Project — business model design and partner selection</li>
-          <li><span class="bucket-year">2023</span>Greece Distributor Pharma settlement agreement — complex and protracted dispute</li>
-          <li><span class="bucket-year">2025</span>Saudi Distributor litigation — ownership through long-running litigation</li>
+          <li><span class="bucket-year">2023</span>Greece Distributor settlement — complex and protracted dispute</li>
+          <li><span class="bucket-year">2025</span>Saudi Distributor litigation — ownership through long-running matter</li>
           <li><span class="bucket-year">2025</span>MEA and LATAM — third-party issue resolution and market transition</li>
         </ul>
       </div>
 
-      <!-- OPERATING MODEL & STRATEGY -->
       <div class="bucket">
         <div class="bucket-head">
           <div class="bucket-icon"><i class="fa-solid fa-diagram-project"></i></div>
@@ -533,13 +535,12 @@ footer{background:var(--ink);padding:2rem 0;border-top:1px solid rgba(140,109,63
         <ul class="bucket-list">
           <li><span class="bucket-year">2023</span>General Counsel Award — Operating Model Transition (Global)</li>
           <li><span class="bucket-year">2023</span>Primary Point of Contact Model + Scientific Office Transfer — Saudi Arabia</li>
-          <li><span class="bucket-year">2023</span>Optimized Promotional Model — delivered to completion</li>
+          <li><span class="bucket-year">2023</span>Optimised Promotional Model — delivered to completion</li>
           <li><span class="bucket-year">2023</span>Law Forward global transformation — team contribution</li>
           <li><span class="bucket-year">2025</span>Intercon Stars Special Award — India legal team</li>
         </ul>
       </div>
 
-      <!-- IP & MARKET ACCESS -->
       <div class="bucket">
         <div class="bucket-head">
           <div class="bucket-icon"><i class="fa-solid fa-scale-balanced"></i></div>
@@ -549,13 +550,12 @@ footer{background:var(--ink);padding:2rem 0;border-top:1px solid rgba(140,109,63
           </div>
         </div>
         <ul class="bucket-list">
-          <li><span class="bucket-year">2023</span>India Subject Expert Committee — positive decision enabling IO indication expansion</li>
-          <li><span class="bucket-year">2024</span>Nivolumab IP rights protection — successful enforcement in India</li>
           <li><span class="bucket-year">2021</span>Multiple Patient Support Programme execution — legal contribution</li>
+          <li><span class="bucket-year">2023</span>India Subject Expert Committee — positive decision enabling indication expansion</li>
+          <li><span class="bucket-year">2024</span>IP rights protection — successful enforcement in India</li>
         </ul>
       </div>
 
-      <!-- INNOVATION -->
       <div class="bucket">
         <div class="bucket-head">
           <div class="bucket-icon"><i class="fa-solid fa-lightbulb"></i></div>
@@ -565,13 +565,12 @@ footer{background:var(--ink);padding:2rem 0;border-top:1px solid rgba(140,109,63
           </div>
         </div>
         <ul class="bucket-list">
-          <li><span class="bucket-year">2022</span>Regional Award — eKYC tool for electronic patient verification in New Patient Assistance Programme</li>
+          <li><span class="bucket-year">2022</span>Regional Award — eKYC tool for electronic patient verification in Patient Assistance Programme</li>
           <li><span class="bucket-year">2023</span>Global Initiative — innovative thinking and strategic legal function perspective</li>
           <li><span class="bucket-year">2023</span>MEA Supply Review and Assessment Workshop — legal accountability and input</li>
         </ul>
       </div>
 
-      <!-- PEOPLE & LEADERSHIP -->
       <div class="bucket">
         <div class="bucket-head">
           <div class="bucket-icon"><i class="fa-solid fa-people-group"></i></div>
@@ -604,12 +603,12 @@ footer{background:var(--ink);padding:2rem 0;border-top:1px solid rgba(140,109,63
       <div>
         <p class="contact-note">Whether you are exploring a professional opportunity, looking to exchange perspectives on pharmaceutical law and compliance, or simply connecting — I would be glad to hear from you.</p>
         <div class="contact-item">
-  <div class="ci-icon"><i class="fa-regular fa-envelope"></i></div>
-  <div>
-    <div class="ci-label">Email</div>
-    <div class="ci-val"><a href="mailto:bhavikcs@gmail.com">bhavikcs@gmail.com</a></div>
-  </div>
-</div>
+          <div class="ci-icon"><i class="fa-regular fa-envelope"></i></div>
+          <div>
+            <div class="ci-label">Email</div>
+            <div class="ci-val"><a href="mailto:bhavikcs@gmail.com">bhavikcs@gmail.com</a></div>
+          </div>
+        </div>
         <div class="contact-item">
           <div class="ci-icon"><i class="fa-brands fa-linkedin-in"></i></div>
           <div>
@@ -628,13 +627,13 @@ footer{background:var(--ink);padding:2rem 0;border-top:1px solid rgba(140,109,63
           <div class="ci-icon"><i class="fa-solid fa-briefcase"></i></div>
           <div>
             <div class="ci-label">Open To</div>
-            <div class="ci-val">Senior in-house legal &amp; compliance leadership roles<br>· Advisory engagements</div>
+            <div class="ci-val">Senior in-house General Counsel · Head of Legal and Compliance roles · Advisory or Board engagements</div>
           </div>
         </div>
       </div>
       <div class="contact-aside">
         <div class="aside-title">A note on this website</div>
-        <p class="aside-body">This is a personal profile reflecting 22+ years of in-house legal and compliance experience. It is intended purely as a professional presence and career record — not as a solicitation, advertisement, or commercial communication in any jurisdiction.</p>
+        <p class="aside-body">This is a personal profile reflecting over 22 years of in-house legal and compliance experience. It is intended purely as a professional presence and career record — not as a solicitation, advertisement, or commercial communication in any jurisdiction.</p>
       </div>
     </div>
   </div>
@@ -644,10 +643,11 @@ footer{background:var(--ink);padding:2rem 0;border-top:1px solid rgba(140,109,63
 <footer>
   <div class="foot-inner">
     <div class="foot-logo">Bhavik Desai</div>
-    <p class="foot-copy">&copy; 2025 Bhavik Desai &nbsp;·&nbsp; Personal Profile &nbsp;·&nbsp; Dubai, UAE</p>
+    <p class="foot-copy">&copy; 2026 Bhavik Desai &nbsp;·&nbsp; Personal Profile &nbsp;·&nbsp; Dubai, UAE</p>
     <ul class="foot-nav">
       <li><a href="#home">Home</a></li>
       <li><a href="#about">About</a></li>
+      <li><a href="#expertise">Expertise</a></li>
       <li><a href="#cv">Experience</a></li>
       <li><a href="#recognition">Recognition</a></li>
       <li><a href="#contact">Contact</a></li>
@@ -657,7 +657,7 @@ footer{background:var(--ink);padding:2rem 0;border-top:1px solid rgba(140,109,63
 
 <script>
   const nav = document.getElementById('navbar');
-  window.addEventListener('scroll', () => nav.style.boxShadow = window.scrollY > 30 ? '0 2px 20px rgba(0,0,0,0.08)' : 'none');
+  window.addEventListener('scroll', () => nav.style.boxShadow = window.scrollY > 30 ? '0 2px 20px rgba(0,0,0,0.06)' : 'none');
   const toggle = document.getElementById('navToggle');
   const links  = document.getElementById('navLinks');
   toggle.addEventListener('click', () => { toggle.classList.toggle('open'); links.classList.toggle('open'); });
